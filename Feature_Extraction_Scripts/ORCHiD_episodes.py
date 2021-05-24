@@ -64,8 +64,8 @@ class getEpisodes():
         
         return(tm, alpha_uniq_trans_locs)
         
-        
-    def Get_Transition_Matrix(self, alpha_uniq_trans_locs, ward_codedf): # Function takes in the uniq locations and ward code dataframe
+    @staticmethod
+    def Get_Transition_Matrix(alpha_uniq_trans_locs, ward_codedf): # Function takes in the uniq locations and ward code dataframe
         Transition_Matrix = np.zeros((len(alpha_uniq_trans_locs) ,len(alpha_uniq_trans_locs))) # initialise the transition matrix
         for i in range(0,len(ward_codedf)): # loop through every individual patients journey            
                     
